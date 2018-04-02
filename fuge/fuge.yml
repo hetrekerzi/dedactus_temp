@@ -1,0 +1,25 @@
+fuge_global:
+  tail: true
+  monitor: true
+  monitor_excludes:
+    - '**/node_modules/**'
+    - '**/.git/**'
+    - '*.log'
+dedactuscrawler:
+  type: process
+  path: ../dedactus-crawler
+  run: 'node bin/www.js'
+  ports:
+    - dedactuscrawler=8081
+dedactusweb:
+  type: process
+  path: ../dedactus-web
+  run: 'npm start'
+  ports:
+    - dedactusweb=4200
+dedactusaggregator:
+  type: process
+  path: ../dedactus-aggregator
+  run: 'node bin/www.js'
+  ports:
+    - dedactusaggregator=8083

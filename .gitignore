@@ -1,0 +1,9 @@
+
+# Global
+/log
+/fuge/log
+
+
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
